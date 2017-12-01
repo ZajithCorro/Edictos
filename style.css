@@ -13,7 +13,6 @@ a {
 }
 
 a:hover {
-    color: #fff;
     text-decoration: none;
 }
 
@@ -28,8 +27,9 @@ main {
 
 /* MENU */
 .menu {
-    background-color: #55565A;
-    color: #fff;
+    background-color: #ffffff;
+    box-shadow: 0 0 5px #000000;
+    color: #55565A;
     height: 64px;
     position: fixed;
     top: 0;
@@ -64,12 +64,13 @@ main {
 }
 
 .menu-nav__item-link {
-    color: #fff;
+    color: #55565A;
     padding-bottom: 5px;
 }
 
 .menu-nav__item-link:hover {
-    border-bottom: 1px solid #ffff;
+    color: #55565A;
+    border-bottom: 1px solid #55565A;
     opacity: .6;
 }
 
