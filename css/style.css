@@ -20,6 +20,22 @@ li {
     list-style: none;
 }
 
+/* LOGIN */
+.container-full {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.card {
+    border: 1px solid rgba(0, 0, 0, .1);
+    height: auto;
+    margin: 0 20px;
+    padding: 20px;
+    width: 500px;
+}
+
 /* CONTENIDO */
 main {
     margin-top: 84px;
