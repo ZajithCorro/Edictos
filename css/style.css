@@ -96,7 +96,7 @@ main {
 }
 
 .title {
-    background-color: #55565acc;
+    background-color: rgba(85, 86, 90, 0.8);
     color: white;
     font-size: 18px;
     padding: 10px 0;
