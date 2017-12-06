@@ -153,7 +153,7 @@
                                     <td>Xalapa</td>
                                     <td>12345.docx</td>
                                     <td>Por corregir</td>
-                                    <td><button type="button" class="btn btn-secondary">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -164,7 +164,7 @@
                                     <td>Orizaba</td>
                                     <td>54321.docx</td>
                                     <td>Por corregir</td>
-                                    <td><button type="button" class="btn btn-secondary">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -175,7 +175,7 @@
                                     <td>Xalapa</td>
                                     <td>56789.docx</td>
                                     <td>Corregido</td>
-                                    <td><button type="button" class="btn btn-secondary">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -186,7 +186,7 @@
                                     <td>Veracruz</td>
                                     <td>98765.docx</td>
                                     <td>Por corregir</td>
-                                    <td><button type="button" class="btn btn-secondary">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -197,8 +197,60 @@
                                     <td>Coatepec</td>
                                     <td>19285.docx</td>
                                     <td>Corregido</td>
-                                    <td><button type="button" class="btn btn-secondary">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
+
+                                <div class="modal fade" id="modalOpciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                                    <div class="modal-dialog" role="document">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLongTitle" class="justify-content-center">Opciones</h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="row justify-content-around">
+                                                    <div class="col-3">
+                                                        <div class="form-check text-center">
+                                                            <label for="corregidoInput" class="form-check-label">
+                                                                <input type="radio" name="tipoPub" id="corregidoInput" class="form-check-input">
+                                                                Corregido
+                                                            </label>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-4">
+                                                        <div class="form-check text-center">
+                                                            <label for="pendienteInput" class="form-check-label">
+                                                                <input type="radio" name="tipoPub" id="pendienteInput" class="form-check-input">
+                                                                Por corregir
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row justify-content-around">
+                                                    <div class="col-3 justify-content-center">
+                                                        <div class="form-group">
+                                                            <button type="button" class="btn btn-secondary">Descargar</button>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-3 justify-content-center">
+                                                        <div class="form-group">
+                                                            <button type="button" class="btn btn-secondary">Subir</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                                
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn btn-secondary btn-block">Guardar Cambios</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </tbody>
                         </table>
                     </div>
