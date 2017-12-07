@@ -11,7 +11,9 @@ $('#formSesion').submit(function(e){
     // 1111 - Operador
     // 2222 - Corrector
     // 3333 - Hemeroteca
+    // 4444 - Director
 
+    // pass
     if ((user === '1111' || user === '2222' || user === '3333' || user === '4444') && pass === 'pass') {
         localStorage.setItem('User', user);
 
