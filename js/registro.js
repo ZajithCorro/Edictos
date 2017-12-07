@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let day = '0' + date.getDate();
     let month = '0' + (date.getMonth() + 1);
     let year = date.getFullYear();
-    
+
     let fecha = day.slice(-2) + '/' + month.slice(-2) + '/' + year;
     document.getElementById('fechaInput').value = fecha;
 });
@@ -30,5 +30,7 @@ function resetForm() {
 }
 
 function getHome() {
-    location.href="http://127.0.0.1:5500/views/home.html"
+    var path = window.location.href;
+    var url = path.slice(0, path.length - 13) + 'home.html'
+    location.href = url;
 }
