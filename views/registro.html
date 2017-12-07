@@ -23,7 +23,7 @@
                         <a href="./home.html" class="menu-nav__item-link">Inicio</a>
                     </li>
                     <li class="menu-nav__item">
-                        <a href="./registro.html" class="menu-nav__item-link">Registro</a>
+                        <a href="./registro.html" class="menu-nav__item-link menu-nav__item-link__active" active>Registro</a>
                     </li>
                      <li class="menu-nav__item">
                         <a href="./modificacion.html" class="menu-nav__item-link">Modificación</a>
@@ -41,7 +41,7 @@
 
     <main>
         <div class="container">
-            <form action="">
+            <form action="#" onsubmit="modal()" id="formRegistro">
                 <div class="container">
                     <div class="row justify-content-center title">
                         <h4 class="text-center">Datos del solicitante</h4>
@@ -50,39 +50,39 @@
                         <div class="col-11 col-md-7 order-2 order-md-first">
                             <div class="form-group">
                                 <label for="nombreInput">Nombre:</label>
-                                <input type="text" id="nombreInput" class="form-control">
+                                <input type="text" id="nombreInput" class="form-control" required pattern="[A-Za-z ]+">
                             </div>
 
                             <div class="form-group">
                                 <label for="telInput">Teléfono:</label>
-                                <input type="number" id="telInput" class="form-control">
+                                <input type="number" id="telInput" class="form-control" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="celInput">Celular:</label>
-                                <input type="number" id="celInput" class="form-control">
+                                <input type="number" id="celInput" class="form-control" required>
                             </div>
 
                             <div class="form-group">
                                 <label for="acreInput">Acreditación de alguna instancia:</label>
-                                <input type="text" id="acreInput" class="form-control">
+                                <input type="text" id="acreInput" class="form-control" pattern="[A-Za-z ]+">
                             </div>
                         </div>
     
                         <div class="col-11 col-md-4">
                             <div class="form-group">
                                 <label for="folioInput">Folio:</label>
-                                <input type="text" id="folioInput" class="form-control">
+                                <input type="text" id="folioInput" class="form-control" readonly value="12345">
                             </div>
 
                             <div class="form-group">
                                 <label for="horaInput">Hora:</label>
-                                <input type="text" id="horaInput" class="form-control">
+                                <input type="text" id="horaInput" class="form-control" readonly>
                             </div>
 
                             <div class="form-group">
                                 <label for="fechaInput">Fecha:</label>
-                                <input type="text" id="fechaInput" class="form-control">
+                                <input type="text" id="fechaInput" class="form-control" readonly>
                             </div>
 
                             <div class="col-4"></div>
@@ -99,7 +99,7 @@
                         <div class="col-md-3 col-11">
                             <div class="form-check text-center">
                                 <label for="edicto" class="form-check-label">
-                                    <input type="radio" name="tipoPub" id="edicto" class="form-check-input">
+                                    <input type="radio" name="tipoPub" id="edicto" class="form-check-input" required>
                                     Edicto
                                 </label>
                             </div>
@@ -108,7 +108,7 @@
                         <div class="col-md-3 col-11">
                             <div class="form-check text-center">
                                 <label for="acuerdo" class="form-check-label">
-                                    <input type="radio" name="tipoPub" id="acuerdo" class="form-check-input">
+                                    <input type="radio" name="tipoPub" id="acuerdo" class="form-check-input" required>
                                     Acuerdo
                                 </label>
                             </div>
@@ -117,7 +117,7 @@
                         <div class="col-md-3 col-11">
                             <div class="form-check text-center">
                                 <label for="convocatoria" class="form-check-label">
-                                    <input type="radio" name="tipoPub" id="convocatoria" class="form-check-input">
+                                    <input type="radio" name="tipoPub" id="convocatoria" class="form-check-input" required>
                                     Convocatoria
                                 </label>
                             </div>
@@ -142,14 +142,14 @@
                     <div class="row justify-content-around">
                         <div class="col-md-5 col-11">
                             <div class="form-group">
-                                <label for="comprobanteInput">Comprobante de pago:</label>
-                                <input type="text" id="comprobanteInput" class="form-control">
+                                <label for="comprobanteInput">Número de pago Referenciado:</label>
+                                <input type="number" id="comprobanteInput" class="form-control" required>
                             </div>
                         </div>
 
                         <div class="col-md-5 col-11">
                             <div class="form-group">
-                                <label for="digitalFile">Documento digital:</label>
+                                <label for="digitalFile">Examinar documento:</label>
                                 <input type="file" id="comprobanteInput" class="form-control-file">
                             </div>
                         </div>
@@ -166,7 +166,7 @@
                         <div class="col-md-3 col-11">
                             <div class="form-group">
                                 <label for="juzagoInput">Juzgado:</label>
-                                <select id="juzgadoInput" class="form-control">
+                                <select id="juzgadoInput" class="form-control" required>
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
@@ -184,7 +184,7 @@
                         <div class="col-md-4 col-11">
                             <div class="form-group">
                                 <label for="pubInput">No. de publicaciones:</label>
-                                <select id="pubInput" class="form-control">
+                                <select id="pubInput" class="form-control" required>
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
@@ -197,7 +197,7 @@
                         <div class="col-md-3 col-11">
                             <div class="form-group">
                                 <label for="pubInput">Lugar:</label>
-                                <select id="pubInput" class="form-control">
+                                <select id="pubInput" class="form-control" required>
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
@@ -220,7 +220,7 @@
                                 <div class="row justify-content-around">
                                     <div class="col-md-4 col-11">
                                         <div class="form-group">
-                                            <input type="date" class="form-control">
+                                            <input type="date" class="form-control" required>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-11">
@@ -262,7 +262,7 @@
                         <div class="col-md-4 col-11">
                             <div class="form-group">
                                 <label for="entregaInput">Fecha de entrega de ejemplares:</label>
-                                <input type="date" name="" id="entregaInput" class="form-control">
+                                <input type="date" name="" id="entregaInput" class="form-control" required>
                             </div>
                         </div>
 
@@ -280,33 +280,34 @@
                         </div>
                         <div class="col-10 col-md-3">
                             <div class="form-group">
-                                <button type="button" class="btn btn-lg btn-secondary btn-block" data-toggle="modal" data-target="#modalConfirmacion">Guardar</button>
+                                <input type="submit" id="btn-sub" class="btn btn-lg btn-secondary btn-block" value="Guardar">
                             </div>
 
                             <!-- Ventana emergente -->
-                            <div class="modal fade" id="modalConfirmacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                            <div class="modal fade" id="modalConfirmacion" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                                 <div class="modal-dialog" role="document">
                                     <div class="modal-content">
                                         <div class="modal-header">
-                                            <h5 class="modal-title" id="exampleModalLongTitle">Ventana de confirmación</h5>
-                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                            </button>
+                                            <h5 class="modal-title">Ventana de confirmación</h5>
                                         </div>
                                         <div class="modal-body">
-                                            <p>¿Desea realizar un nuevo registro?</p>
+                                            <div class="alert alert-success" role="alert">
+                                                <h4 class="alert-heading text-center">Se ha realizado con éxito el registro.</h4>
+                                            </div>
+                                            <hr>
+                                            <p class="text-center">¿Desea realizar un nuevo registro?</p>
 
                                             <div class="container">
                                             <div class="row justify-content-center">
                                                 <div class="col-3">
                                                     <div class="form-group">
-                                                        <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal">Si</button>
+                                                        <button type="button" class="btn btn-secondary btn-block" data-dismiss="modal" onclick="resetForm()">Si</button>
                                                     </div>
                                                 </div>
                                                     
                                                 <div class="col-3">
                                                     <div class="form-group">
-                                                        <button type="button" class="btn btn-secondary btn-block">No</button>
+                                                        <button type="button" class="btn btn-secondary btn-block" onclick="getHome()">No</button>
                                                     </div>
                                                 </div>
                                             </div>
@@ -319,7 +320,7 @@
                         
                         <div class="col-10 col-md-3">
                             <div class="form-group">
-                                <button type="button" class="btn btn-lg btn-secondary btn-block">Generar Formato</button>
+                                <button type="button" class="btn btn-lg btn-secondary btn-block" id="btn-form">Generar formato</button>
                             </div>
                         </div>
                     </div> 
@@ -328,5 +329,7 @@
             </form>
         </div>
     </main>
+
+    <script src="../js/index.js"></script>
 </body>
 </html>

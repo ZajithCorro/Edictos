@@ -90,6 +90,12 @@ main {
     opacity: .6;
 }
 
+.menu-nav__item-link__active {
+    color: #55565A;
+    border-bottom: 1px solid #55565A;
+    opacity: .6;
+}
+
 /* CONTENIDO */
 .container {
     padding: 0;
