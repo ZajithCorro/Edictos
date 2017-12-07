@@ -27,8 +27,9 @@ $('#formRegistro').submit(function(e) {
 })
 
 function resetForm() {
+    var path = window.location.href;
     document.getElementById('formRegistro').submit();
-    document.getElementById('formRegistro').reset();
+    location.href = path;
 }
 
 function getHome() {
