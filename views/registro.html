@@ -167,16 +167,16 @@
                             <div class="form-group">
                                 <label for="juzagoInput">Juzgado:</label>
                                 <select id="juzgadoInput" class="form-control" required>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
-                                    <option value="">7</option>
-                                    <option value="">8</option>
-                                    <option value="">9</option>
-                                    <option value="">10</option>
+                                    <option value="" selected></option>
+                                    <option value="">Segundo de Primera Instancia</option>
+                                    <option value="">Cuarto de Primera Instancia</option>
+                                    <option value="">Sexto de Primera Instancia</option>
+                                    <option value="">Octavo de Primera Instancia</option>
+                                    <option value="">Décimo de Primera Instancia</option>
+                                    <option value="">Mixto de Primera Instancia</option>
+                                    <option value="">Segundo Menor</option>
+                                    <option value="">Cuarto Menor</option>
+                                    <option value="">Mixto Menor</option>
                                 </select>
                             </div>
                         </div>
@@ -185,11 +185,13 @@
                             <div class="form-group">
                                 <label for="pubInput">No. de publicaciones:</label>
                                 <select id="pubInput" class="form-control" required>
+                                    <option value="" selected></option>
                                     <option value="">1</option>
                                     <option value="">2</option>
                                     <option value="">3</option>
                                     <option value="">4</option>
                                     <option value="">5</option>
+                                    <option value="">6</option>
                                 </select>
                             </div>
                         </div>
@@ -198,16 +200,28 @@
                             <div class="form-group">
                                 <label for="pubInput">Lugar:</label>
                                 <select id="pubInput" class="form-control" required>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
-                                    <option value="">7</option>
-                                    <option value="">8</option>
-                                    <option value="">9</option>
-                                    <option value="">10</option>
+                                    <option value="" selected></option>
+                                    <option value="">Acayucan</option>
+                                    <option value="">Coatepec</option>
+                                    <option value="">Coatzacoalcos</option>
+                                    <option value="">Córdoba</option>
+                                    <option value="">Cosamaloapan</option>
+                                    <option value="">Chicontepec</option>
+                                    <option value="">Huatusco</option>
+                                    <option value="">Huayacocotla</option>
+                                    <option value="">Jalacingo</option>
+                                    <option value="">Misantla</option>
+                                    <option value="">Orizaba</option>
+                                    <option value="">Ozuluama</option>
+                                    <option value="">Pánuco</option>
+                                    <option value="">Papantla</option>
+                                    <option value="">Poza Rica</option>
+                                    <option value="">San Andrés Tuxtla</option>
+                                    <option value="">Tantoyuca</option>
+                                    <option value="">Tuxpan</option>
+                                    <option value="">Veracruz</option>
+                                    <option value="">Xalapa</option>
+                                    <option value="">Zongolica</option>
                                 </select>
                             </div>
                         </div>
@@ -320,7 +334,7 @@
                         
                         <div class="col-10 col-md-3">
                             <div class="form-group">
-                                <button type="button" class="btn btn-lg btn-secondary btn-block" id="btn-form">Generar formato</button>
+                                <button type="button" class="btn btn-lg btn-secondary btn-block" id="btn-form" onclick="modal()">Generar formato</button>
                             </div>
                         </div>
                     </div> 
@@ -330,6 +344,6 @@
         </div>
     </main>
 
-    <script src="../js/index.js"></script>
+    <script src="../js/registro.js"></script>
 </body>
 </html>
