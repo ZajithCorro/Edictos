@@ -12,6 +12,6 @@ $('#formSesion').submit(function(e){
         var url = path.slice(0, path.length - 10) + 'home.html'
         location.href = url;
     } else {
-        document.getElementById('formSesion').reset();
+        document.getElementById('errorMsg').classList.toggle('d-none');
     }
 })
