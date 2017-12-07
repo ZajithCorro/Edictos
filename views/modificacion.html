@@ -51,7 +51,7 @@
                         <div class="col-11 col-md-5">
                             <div class="form-group">
                                 <label for="folioInput">Folio:</label>
-                                <input type="number" id="folioInput" class="form-control">
+                                <input type="number" id="folioInput" class="form-control" required>
                             </div>
 
                             <div class="form-group">
@@ -62,12 +62,16 @@
                             <div class="form-group">
                                 <label for="juzgadoInput">Juzgado:</label>
                                 <select id="juzgadoInput" class="form-control">
-                                    <option selected>Elige un Juzgado</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
+                                    <option value="" selected></option>
+                                    <option value="">Segundo de Primera Instancia</option>
+                                    <option value="">Cuarto de Primera Instancia</option>
+                                    <option value="">Sexto de Primera Instancia</option>
+                                    <option value="">Octavo de Primera Instancia</option>
+                                    <option value="">Décimo de Primera Instancia</option>
+                                    <option value="">Mixto de Primera Instancia</option>
+                                    <option value="">Segundo Menor</option>
+                                    <option value="">Cuarto Menor</option>
+                                    <option value="">Mixto Menor</option>
                                 </select>
                             </div>
 
@@ -91,12 +95,28 @@
                             <div class="form-group">
                                 <label for="lugarInput">Lugar:</label>
                                 <select id="lugarInput" class="form-control">
-                                    <option value="" selected>Elige un lugar</option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
+                                    <option value="" selected></option>
+                                    <option value="">Acayucan</option>
+                                    <option value="">Coatepec</option>
+                                    <option value="">Coatzacoalcos</option>
+                                    <option value="">Córdoba</option>
+                                    <option value="">Cosamaloapan</option>
+                                    <option value="">Chicontepec</option>
+                                    <option value="">Huatusco</option>
+                                    <option value="">Huayacocotla</option>
+                                    <option value="">Jalacingo</option>
+                                    <option value="">Misantla</option>
+                                    <option value="">Orizaba</option>
+                                    <option value="">Ozuluama</option>
+                                    <option value="">Pánuco</option>
+                                    <option value="">Papantla</option>
+                                    <option value="">Poza Rica</option>
+                                    <option value="">San Andrés Tuxtla</option>
+                                    <option value="">Tantoyuca</option>
+                                    <option value="">Tuxpan</option>
+                                    <option value="">Veracruz</option>
+                                    <option value="">Xalapa</option>
+                                    <option value="">Zongolica</option>
                                 </select>
                             </div>
 
@@ -115,14 +135,14 @@
 
                         <div class="col-10 col-md-3">
                             <div class="form-group">
-                                <button type="submit" class="btn btn-lg btn-secondary btn-block">Consultar</button>
+                                <input type="button" class="btn btn-lg btn-secondary btn-block" value="Consultar" onclick="consultar()">
                             </div>
                         </div>
                     </div>
                 </div>
             </form>
 
-            <div class="container">
+            <div class="container d-none" id="resultados">
                 <div class="row justify-content-center title">
                     <h4>Resultados de búsqueda</h4>
                 </div>
@@ -152,7 +172,7 @@
                                     <td>Mixto Menor</td>
                                     <td>Xalapa</td>
                                     <td>12345.docx</td>
-                                    <td>Por corregir</td>
+                                    <td class="text-danger">Por corregir</td>
                                     <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
                                 <tr>
@@ -163,7 +183,7 @@
                                     <td>Segundo Menor</td>
                                     <td>Orizaba</td>
                                     <td>54321.docx</td>
-                                    <td>Por corregir</td>
+                                    <td class="text-danger">Por corregir</td>
                                     <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
                                 <tr>
@@ -174,7 +194,7 @@
                                     <td>Mixto Menor</td>
                                     <td>Xalapa</td>
                                     <td>56789.docx</td>
-                                    <td>Corregido</td>
+                                    <td class="text-success">Corregido</td>
                                     <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
                                 <tr>
@@ -185,7 +205,7 @@
                                     <td>Mixto Menor</td>
                                     <td>Veracruz</td>
                                     <td>98765.docx</td>
-                                    <td>Por corregir</td>
+                                    <td class="text-danger">Por corregir</td>
                                     <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
                                 <tr>
@@ -196,7 +216,7 @@
                                     <td>Mixto Menor</td>
                                     <td>Coatepec</td>
                                     <td>19285.docx</td>
-                                    <td>Corregido</td>
+                                    <td class="text-success">Corregido</td>
                                     <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
                                 </tr>
 
@@ -246,7 +266,7 @@
                                             </div>
                                                 
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary btn-block">Guardar Cambios</button>
+                                                <button type="button" class="btn btn-secondary btn-block" onclick="cerrar()">Guardar Cambios</button>
                                             </div>
                                         </div>
                                     </div>
@@ -258,5 +278,7 @@
             </div>
         </div>
     </main>
+
+    <script src="../js/modificacion.js"></script>
 </body>
 </html>
