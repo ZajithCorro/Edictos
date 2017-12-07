@@ -187,14 +187,14 @@
                         <div class="col-md-4 col-11">
                             <div class="form-group">
                                 <label for="pubInput">No. de publicaciones:</label>
-                                <select id="pubInput" class="form-control" required>
-                                    <option value="" selected></option>
-                                    <option value="">1</option>
-                                    <option value="">2</option>
-                                    <option value="">3</option>
-                                    <option value="">4</option>
-                                    <option value="">5</option>
-                                    <option value="">6</option>
+                                <select id="pubInput" class="form-control" required onchange="numPublicaciones(this.value)">
+                                    <option value="other" selected></option>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                    <option value="6">6</option>
                                 </select>
                             </div>
                         </div>
@@ -237,18 +237,18 @@
                                 <div class="row justify-content-around">
                                     <div class="col-md-4 col-11">
                                         <div class="form-group">
-                                            <input type="date" class="form-control" required>
+                                            <input type="date" class="form-control" id="fecha-1" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-11">
                                         <div class="form-group">
-                                            <input type="date" class="form-control">
+                                            <input type="date" class="form-control" id="fecha-2" readonly>
                                         </div>
                                     </div>
 
                                     <div class="col-md-4 col-11">
                                         <div class="form-group">
-                                            <input type="date" class="form-control">
+                                            <input type="date" class="form-control" id="fecha-3" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -256,18 +256,18 @@
                                 <div class="row justify-content-around">
                                     <div class="col-md-4 col-11">
                                         <div class="form-group">
-                                            <input type="date" class="form-control">
+                                            <input type="date" class="form-control" id="fecha-4" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-4 col-11">
                                         <div class="form-group">
-                                            <input type="date" class="form-control">
+                                            <input type="date" class="form-control" id="fecha-5" readonly>
                                         </div>
                                     </div>
 
                                     <div class="col-md-4 col-11">
                                         <div class="form-group">
-                                            <input type="date" class="form-control">
+                                            <input type="date" class="form-control" id="fecha-6" readonly>
                                         </div>
                                     </div>
                                 </div>
