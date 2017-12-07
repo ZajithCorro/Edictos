@@ -15,17 +15,18 @@
 <body>
     <div class="container-full">
         <div class="card">
-            <form action="">
+            <h2 class="text-center">Iniciar sesión</h2>
+            <form action="#" id="formSesion">
                 <div class="form-group">
-                    <label for="emailInput">Email:</label>
-                    <input type="email" id="emailInput" class="form-control">
+                    <label for="emailInput">Número de trabajador:</label>
+                    <input type="number" id="numeroInput" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="passInput">Contraseña:</label>
-                    <input type="password" id="passInput" class="form-control">
+                    <input type="password" id="passInput" class="form-control" required>
                 </div>
                 <div class="row">
-                    <button type="submit" class="btn btn-success btn-block">Iniciar sesión</button>
+                    <input type="submit" class="btn btn-secondary btn-block" value="Iniciar sesión">
                 </div>
                 <div class="row justify-content-center">
                     <a href="./forgot.html">Olvidaste contraseña</a>
@@ -33,5 +34,6 @@
             </form>
         </div>
     </div>
+    <script src="../js/sesion.js"></script>
 </body>
 </html>

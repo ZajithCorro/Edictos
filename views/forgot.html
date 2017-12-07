@@ -15,23 +15,22 @@
 <body>
     <div class="container-full">
         <div class="card">
-            <form action="">
+            <h2 class="text-center">Olvidé mi contraseña</h2>
+            <form action="" id="formForgot">
                 <div class="form-group">
                     <label for="emailInput">Número de trabajador:</label>
-                    <input type="number" id="emailInput" class="form-control">
+                    <input type="number" id="emailInput" class="form-control" required>
                 </div>
                 <div class="form-group">
                     <label for="passInput">Correo:</label>
-                    <input type="email" id="passInput" class="form-control">
+                    <input type="email" id="passInput" class="form-control" required>
                 </div>
                 <div class="row">
-                    <button type="submit" class="btn btn-success btn-block">Recuperar mi contraseña</button>
-                </div>
-                <div class="row justify-content-center">
-                    <a href="./index.html">Inicio de sesión</a>
+                    <input type="submit" class="btn btn-secondary btn-block" value="Recuperar mi contraeña">
                 </div>
             </form>
         </div>
     </div>
+    <script src="../js/forgot.js"></script>
 </body>
 </html>
