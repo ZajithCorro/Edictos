@@ -21,15 +21,18 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('fechaInput').value = fecha;
 });
 
-function modal(){
-    $("#modalConfirmacion").modal();
-};
+$('#formRegistro').submit(function(e) {
+    e.preventDefault();
+    $('#modalConfirmacion').modal('show');
+})
 
 function resetForm() {
+    document.getElementById('formRegistro').submit();
     document.getElementById('formRegistro').reset();
 }
 
 function getHome() {
+    document.getElementById('formRegistro').submit();
     var path = window.location.href;
     var url = path.slice(0, path.length - 13) + 'home.html'
     location.href = url;

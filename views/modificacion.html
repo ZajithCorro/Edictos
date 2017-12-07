@@ -41,7 +41,7 @@
 
     <main>
         <div class="container">
-            <form action="">
+            <form action="" id="formModificacion">
                 <div class="container">
                     <div class="row justify-content-center title">
                         <h4>Datos de consulta</h4>
@@ -55,7 +55,7 @@
                             </div>
 
                             <div class="form-group">
-                                <label for="fechaPubInput">Fecha Publicación:</label>
+                                <label for="fechaPubInput">Fecha de publicación:</label>
                                 <input type="date" id="fechaPubInput" class="form-control">
                             </div>
 
@@ -83,7 +83,7 @@
 
                         <div class="col-11 col-md-5">
                             <div class="form-group">
-                                <label for="fechaRegisInput">Fecha de Registro:</label>
+                                <label for="fechaRegisInput">Fecha de registro:</label>
                                 <input type="date" id="fechaRegisInput" class="form-control">
                             </div>
 
@@ -135,7 +135,7 @@
 
                         <div class="col-10 col-md-3">
                             <div class="form-group">
-                                <input type="button" class="btn btn-lg btn-secondary btn-block" value="Consultar" onclick="consultar()">
+                                <input type="submit" class="btn btn-lg btn-secondary btn-block" value="Consultar">
                             </div>
                         </div>
                     </div>
@@ -173,7 +173,7 @@
                                     <td>Xalapa</td>
                                     <td>12345.docx</td>
                                     <td class="text-danger">Por corregir</td>
-                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opción</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">2</th>
@@ -184,7 +184,7 @@
                                     <td>Orizaba</td>
                                     <td>54321.docx</td>
                                     <td class="text-danger">Por corregir</td>
-                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opción</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">3</th>
@@ -195,7 +195,7 @@
                                     <td>Xalapa</td>
                                     <td>56789.docx</td>
                                     <td class="text-success">Corregido</td>
-                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opción</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">4</th>
@@ -206,7 +206,7 @@
                                     <td>Veracruz</td>
                                     <td>98765.docx</td>
                                     <td class="text-danger">Por corregir</td>
-                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opción</button></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">5</th>
@@ -217,7 +217,7 @@
                                     <td>Coatepec</td>
                                     <td>19285.docx</td>
                                     <td class="text-success">Corregido</td>
-                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opcion</button></td>
+                                    <td><button type="button" class="btn btn-secondary" data-toggle="modal" data-target="#modalOpciones">Opción</button></td>
                                 </tr>
 
                                 <div class="modal fade" id="modalOpciones" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
@@ -266,7 +266,7 @@
                                             </div>
                                                 
                                             <div class="modal-footer">
-                                                <button type="button" class="btn btn-secondary btn-block" onclick="cerrar()">Guardar Cambios</button>
+                                                <button type="button" class="btn btn-secondary btn-block" onclick="cerrar()">Guardar cambios</button>
                                             </div>
                                         </div>
                                     </div>
