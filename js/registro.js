@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    
+
     // Folio
     let num = Math.floor(Math.random() * (1000 - 10) + 10);
     document.getElementById('folioInput').value = num;
@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
     let date = new Date();
     let hour = date.getHours();
     let minute = '0' + date.getMinutes();
-    
+
     let hora = hour + ':' + minute.slice(-2);
     document.getElementById('horaInput').value = hora;
 
@@ -34,9 +34,9 @@ function resetForm() {
 
 function getHome() {
     document.getElementById('formRegistro').submit();
-    var path = window.location.href;
-    var url = path.slice(0, path.length - 13) + 'home.html'
-    location.href = url;
+    // var path = window.location.href;
+    // var url = (window.location.href).slice(0, path.length - 13) + 'home.html'
+    location.href = (window.location.href).slice(0, path.length - 13) + 'home.html';
 }
 
 function numPublicaciones(valor) {
@@ -46,6 +46,7 @@ function numPublicaciones(valor) {
     let date4 = document.getElementById('fecha-4');
     let date5 = document.getElementById('fecha-5');
     let date6 = document.getElementById('fecha-6');
+    let containerFechas = document.getElementById('container-fechas');
 
     if (valor === '1') {
         date1.readOnly = false;
